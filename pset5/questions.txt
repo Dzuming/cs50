@@ -1,0 +1,39 @@
+0.  It's The longest possible word in the ENglish language that's why length is equal 45. According to the Oxford English Dictionary, it is "an artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust.
+1.  getrusage() returns resource usage measures for who, which can be one of the following:
+RUSAGE_SELF
+Return resource usage statistics for the calling process, which is the sum of resources used by all threads in the process.
+RUSAGE_CHILDREN
+Return resource usage statistics for all children of the calling process that have terminated and been waited for.
+ These statistics will include the resources used by grandchildren, and further removed descendants,
+  if all of the intervening descendants waited on their terminated children.
+2.  The rusage struct stores 16 sets of data.
+rusage definition
+struct rusage {
+    struct timeval ru_utime; /* user CPU time used */
+    struct timeval ru_stime; /* system CPU time used */
+    long   ru_maxrss;        /* maximum resident set size */
+    long   ru_ixrss;         /* integral shared memory size */
+    long   ru_idrss;         /* integral unshared data size */
+    long   ru_isrss;         /* integral unshared stack size */
+    long   ru_minflt;        /* page reclaims (soft page faults) */
+    long   ru_majflt;        /* page faults (hard page faults) */
+    long   ru_nswap;         /* swaps */
+    long   ru_inblock;       /* block input operations */
+    long   ru_oublock;       /* block output operations */
+    long   ru_msgsnd;        /* IPC messages sent */
+    long   ru_msgrcv;        /* IPC messages received */
+    long   ru_nsignals;      /* signals received */
+    long   ru_nvcsw;         /* voluntary context switches */
+    long   ru_nivcsw;        /* involuntary context switches */
+};
+3.  It save us memory because we dont have to make a copies before and after variables,  and you cannot place value into prototype because it needs pointer 
+4.  First program checks if it is able to open a text file. If yes, by for loop it reads character by character because of fgetc, until end of file appear 
+and  checks if character is only alphabetical or it's apostroph. If yes, add char to a word. A program ignore digit numbers and too long alphabetical strings 
+where length is more than 45. Ignore is make by while loop and set array of variable word to 0. The program will check, spelling, time of process 
+record count of found word reset the index of the next word.  This procces will continue by last word will have found. 
+5.  fgetc read word character by character, and accept only alphapetical characters or apostrophes. Fscans can store for example sign coma in an array and it can cause problems with misspelling
+6.  Because these values shouldn't be modified during the checking process and const quarantee that these parameters ane not modifable. 
+7.  Create a hastable to separate words lesss than 46 letters into a linked list. Node contains a words with Lenght less than 46 and in addition pounter to a next node.
+8.  I don't remember because the problem was segmentation fault and if code started to work it was a similar score to a current verison.
+9.  after working version probably nothing.
+10. I'm not sure about optimal value of hashtable size.

@@ -1,0 +1,36 @@
+0.  BMP can be 2 colors (1 bit), 16 colors (4 bits), 256 colors (8 bits), 16.7 million colors (24 bits); 
+JPG supports 16.7 million colors (24 bits);  
+The GIF format supports 256 colors (8 bits); 
+The PNG format supports 256 colors (8 bits) but can be extend to 16.7 million colors (24 bits);
+1.  GIF
+2.  With lossless compression, every single bit of data that was originally in the file remains after the file is uncompressed. 
+All of the information is completely restored. lossy compression reduces a file by permanently eliminating certain information, 
+especially redundant information. When the file is uncompressed, only a part of the original information is still there.
+3.  JPEG
+4.  First, the system modifies the filename’s first character in the file’s directory entry to signal that the file has been deleted and 
+that the directory entry can be recycled. Second, the system moves all of the file’s FAT clusters to the hard drive’s list of free clusters. 
+The actual file data is never touched.
+5.  You can Physically destroying the drive, rendering it unusable • Degaussing the drive to randomize the magnetic domains—most likely 
+rendering the drive unusable in the process • Overwriting the drive’s data so that it cannot be recovered
+6.  stdint.h is a header file in the C standard library allow programmers to write more portable code by providing a set of typedefs that specify 
+exact-width integer types, together with the defined minimum and maximum allowable values for 
+each type, using macros[
+7.  7. It documents your intent what type of data want you use - you will be storing numbers,
+which are exactly specific number of bites wide
+8.  BYTE = 1 byte;
+DWORD = 4 bytes
+LONG = 4 bytes
+WORD = 2 bytes
+9.  The first two byes means a WORD type and it’s bfType. It’s Specifies the file type. It must be set to the signature word BM (0x4D42) to indicate bitmap.
+10. biSize > The number of bytes required by the structure.
+bfSize > The size, in bytes, of the bitmap file.
+11. If biHeight is negative, the bitmap is a top-down DIB with the origin at the upper
+12. The biBitCount member of the BITMAPINFOHEADER structure
+bits that define each pixel and the maximum number of colors in the bitmap.
+13. Because it can be no existing file so if it's no existing file available to open it returns null.
+14. It define how many elements we want to read. We just want to read one BITMAPINFOHEADER that's why valur is exual 1.
+15. (4 - (3 * sizeof(RGBTRIPLE)) % 4) % 4=3
+16. 16. sets the file position of the stream to the given offset.
+17. This is an integer constant which, when used as the whence the fseek or fseeko function, specifies that the offset provided is relative to the 
+current file position.
+18. Rob Bowden with a cat
